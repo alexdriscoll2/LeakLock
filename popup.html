@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">L</div>
+      <span class="name">LeakLock</span>
+    </div>
+  </header>
+
+  <main class="card">
+    <h1 id="site">example.com</h1>
+
+    <section class="panel filter-add">
+  <label class="filter-label" for="filterInput">Add a new Filter:</label>
+  <div class="filter-form">
+    <input id="filterInput" class="filter-input" type="text"
+           placeholder="Enter movie names, inflammatory content, etc." />
+    <button class="filter-btn" id="addFilter">Add</button>
+  </div>
+</section>
+
+
+    <section class="panel stats">
+      <div class="row-title">
+        <span>Current Filters:</span>
+      </div>
+
+      <div class="row-title">
+        <span>Filter 1</span>
+        <span>Filter 2</span>
+        <span>Filter 3</span>
+      </div>
+
+      <div>
+        <span><b class="red" id="pageCount">0</b> leaks locked on this page</span>
+        <br>
+        <span><b class="red" id="totalCount">204</b> leaks locked in total</span>
+      </div>
+    </section>
+
+    <button class="pause" id="pause"><span id="pauseIcon">&#10074;&#10074;</span> <span id="pauseText">Pause on this site</span></button>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
