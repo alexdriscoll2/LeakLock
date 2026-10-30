@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Leak Lock",
+  "version": "0.3.14",
+  "description": "Hide individual posts, edit your filters, and teach them phrases from content you choose.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Leak Lock"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
