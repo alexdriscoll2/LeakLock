@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build.local.json
+dev/demo.js
+evidence/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log

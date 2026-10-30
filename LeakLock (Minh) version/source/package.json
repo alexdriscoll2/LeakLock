@@ -1,0 +1,23 @@
+{
+  "name": "leak-lock",
+  "version": "0.3.14",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build",
+    "test:browser": "node tests/browser.mjs",
+    "preview": "npm run build && node dev/server.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.0.0",
+    "playwright": "^1.51.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
+  }
+}
